@@ -47,6 +47,12 @@
             }
         }
 
+        public static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine(title);
+            Console.WriteLine(pages);
+        }
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -124,10 +130,23 @@
 
             //Assignment 5 file - Q1
 
-            string title = "Clean Code";
-            bool flag = TryGetPrice(title, out double price);
-            Console.WriteLine(flag);
-            Console.WriteLine(price);
+            //string title = "Clean Code";
+            //bool flag = TryGetPrice(title, out double price);
+            //Console.WriteLine(flag);
+            //Console.WriteLine(price);
+
+            //=============================================================
+
+            //Assignment 5 file - Q2
+
+            string title = "C#";
+            PrintBookInfo(title);
+
+            string title02 = "Code";
+            int pages = 50;
+            PrintBookInfo(title02, pages);
+
+
         }
     }
 }
