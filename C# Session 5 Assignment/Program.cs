@@ -28,6 +28,11 @@
             pages = pages + 50;
         }
 
+        public static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -88,10 +93,18 @@
 
             //I expect it variable with change after calling beacause its calling by reference
 
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine(pages);
 
+            //-------------------------------------------------------------
+
+            //Assinment 4 file - Q8
+
+            double[] prices = { 20.5, 5.5, 60, 6 };
+            ReplaceArray(ref prices);
+
+            foreach(double price in prices) { Console.WriteLine(price); }
         }
     }
 }
