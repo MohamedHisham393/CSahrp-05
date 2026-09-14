@@ -53,6 +53,14 @@
             Console.WriteLine(pages);
         }
 
+        public static void PrintAllTitles(params string[] titles)
+        {
+            for(int i = 0; i< titles.Length; i++)
+            {
+                Console.WriteLine(titles[i]);
+            }
+        }
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -150,8 +158,17 @@
 
             //Assignment 5 file - Q3
 
-            PrintBookInfo(pages: 30, title: "CSharp");
+            //PrintBookInfo(pages: 30, title: "CSharp");
 
+
+            //=============================================================
+
+            //Assignment 5 file - Q4
+
+            string book01 = "Coding";
+            string book02 = "C#";
+            string book03 = "Clean Code";
+            PrintAllTitles(book01, book02, book03);
         }
     }
 }
