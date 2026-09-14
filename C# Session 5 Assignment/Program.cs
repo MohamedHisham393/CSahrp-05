@@ -18,6 +18,11 @@
             pages = pages + 50;
         }
 
+        public static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -56,9 +61,21 @@
 
             //I expect that no changes on the variable because its pass by value
 
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages);
+
+            //-------------------------------------------------------------
+
+            //Assinment 4 file - Q6
+
+            //I expect it with change after calling because its passing by value - reference type so the 2 variables refer to same addres
+
+            double[] prices = { 25.5, 40.0 };
+            Console.WriteLine(prices[0]);
+
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
         }
     }
 }
