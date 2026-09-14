@@ -13,6 +13,10 @@
             Console.WriteLine($"Book Title: {title}");
         }
 
+        public static void AddBonusPages(int pages)
+        {
+            pages = pages + 50;
+        }
 
         static void Main(string[] args)
         {
@@ -43,8 +47,18 @@
 
             //Assinment 4 file - Q4
 
-            string title = "Clean Code";
-            PrintBookTitle(title);
+            //string title = "Clean Code";
+            //PrintBookTitle(title);
+
+            //-------------------------------------------------------------
+
+            //Assinment 4 file - Q5
+
+            //I expect that no changes on the variable because its pass by value
+
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
         }
     }
 }
