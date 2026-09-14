@@ -23,6 +23,11 @@
             prices[0] -= 5;
         }
 
+        public static void AddBonusPagesByRef(ref int pages)
+        {
+            pages = pages + 50;
+        }
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -71,11 +76,22 @@
 
             //I expect it with change after calling because its passing by value - reference type so the 2 variables refer to same addres
 
-            double[] prices = { 25.5, 40.0 };
-            Console.WriteLine(prices[0]);
+            //double[] prices = { 25.5, 40.0 };
+            //Console.WriteLine(prices[0]);
 
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
+            //ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]);
+
+            //-------------------------------------------------------------
+
+            //Assinment 4 file - Q7
+
+            //I expect it variable with change after calling beacause its calling by reference
+
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages);
+
         }
     }
 }
