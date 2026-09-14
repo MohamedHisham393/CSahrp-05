@@ -33,6 +33,20 @@
             prices = new double[] { 10.0, 12.5, 15.0 };
         }
 
+        public static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code" )
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+        }
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -101,10 +115,19 @@
 
             //Assinment 4 file - Q8
 
-            double[] prices = { 20.5, 5.5, 60, 6 };
-            ReplaceArray(ref prices);
+            //double[] prices = { 20.5, 5.5, 60, 6 };
+            //ReplaceArray(ref prices);
 
-            foreach(double price in prices) { Console.WriteLine(price); }
+            //foreach(double price in prices) { Console.WriteLine(price); }
+
+            //=============================================================
+
+            //Assignment 5 file - Q1
+
+            string title = "Clean Code";
+            bool flag = TryGetPrice(title, out double price);
+            Console.WriteLine(flag);
+            Console.WriteLine(price);
         }
     }
 }
