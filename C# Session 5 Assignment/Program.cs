@@ -8,6 +8,11 @@
         }
             
 
+        public static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book Title: {title}");
+        }
+
 
         static void Main(string[] args)
         {
@@ -32,7 +37,14 @@
 
             //Assinment 4 file - Q3
 
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
+
+            //-------------------------------------------------------------
+
+            //Assinment 4 file - Q4
+
+            string title = "Clean Code";
+            PrintBookTitle(title);
         }
     }
 }
