@@ -2,6 +2,13 @@
 {
     internal class Program
     {
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+            
+
+
         static void Main(string[] args)
         {
             //Assinment 4 file - Q1
@@ -13,13 +20,19 @@
 
             //Assinment 4 file - Q2
 
-            int[,] shelfCopies =
-            {
-                {3,5 },
-                {1,4 }
-            };
+            //int[,] shelfCopies =
+            //{
+            //    {3,5 },
+            //    {1,4 }
+            //};
 
-            Console.WriteLine(shelfCopies[1,0]);
+            //Console.WriteLine(shelfCopies[1,0]);
+
+            //-------------------------------------------------------------
+
+            //Assinment 4 file - Q3
+
+            PrintWelcomeMessage();
         }
     }
 }
